@@ -1,0 +1,61 @@
+body {
+    background-image: url("/img/bg.jpg");
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #607d8b;
+    margin-top: 40px;
+}
+
+/*b {*/
+    /*background: #3498db;*/
+    /*color: white;*/
+    /*border: none;*/
+    /*padding: 3px 6px 2px 6px;*/
+    /*border-radius: 4px;*/
+    /*margin: 0 3px;*/
+    /*vertical-align: baseline;*/
+    /*font-weight: normal;*/
+/*}*/
+
+b {
+    color: #3498db;
+    background-color: #f8f8f8;
+    padding: 3px 5px;
+    margin: 0 2px;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+
+div.card-panel {
+    width: 100%;
+    font-size: 14px;
+}
+
+div .col active {
+    width: 100%;
+}
+
+.wrapper {
+    width: 85%;
+    margin: auto;
+}
+
+ul.tabs {
+    background: none;
+}
+
+.collapsible-header:not(".active") {
+    width: 250%;
+}
+
+.collapsible-header, .collapsible-body, .col {
+    width: 100%;
+}
+.link{
+    margin-bottom: 25px;
+}
+.link a{
+    margin-right: 25px;
+}

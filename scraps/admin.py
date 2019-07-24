@@ -1,3 +1,6 @@
 from django.contrib import admin
+from scraps.models import Technology, Content
 
-# Register your models here.
+
+admin.site.register(Technology)
+admin.site.register(Content)
