@@ -7,11 +7,8 @@
   <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css" />
 
-  <link rel="stylesheet" href="{% static '/css/prism.css' %}">
-
-{#  <link rel="stylesheet"#}
-{#      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/default.min.css">#}
-{#  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>#}
+  <!-- EnlighterJS -->
+  <link rel="stylesheet" href="{% static '/lib/EJS3/dist/enlighterjs.atomic.min.css' %}">
 
   <title>{% block title %}{% endblock %}</title>
 </head>
@@ -42,6 +39,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>
 
-<script src="{% static 'js/prism.js' %}"></script>
-{#<script>hljs.initHighlightingOnLoad();</script>#}
+<!-- EnlighterJS -->
+<script src="{% static '/lib/EJS3/dist/enlighterjs.min.js' %}"></script>
+<script type="text/javascript">
+  EnlighterJS.init('pre', 'code.highlightme', {
+            theme: 'atomic',
+            indent : 2
+        });
+</script>
 </html>

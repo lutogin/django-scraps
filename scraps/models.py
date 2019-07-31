@@ -18,7 +18,7 @@ class Content(models.Model):
     """Model content for post"""
     technology = models.ForeignKey(Technology, on_delete=models.CASCADE, related_name='technology')
     title = models.CharField(verbose_name='Title', max_length=255)
-    content = models.TextField(verbose_name='Content', default='<pre><code class="language-php"></code></pre>')
+    content = models.TextField(verbose_name='Content', default='<pre data-enlighter-language="python"></pre>')
 
     def __str__(self):
         return self.title
@@ -26,3 +26,4 @@ class Content(models.Model):
     class Meta:
         verbose_name_plural = 'Contents'
         verbose_name = 'Content'
+        ordering = ['id']

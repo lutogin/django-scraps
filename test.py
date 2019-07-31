@@ -1,14 +1,5 @@
-from random import random, randint
-from collections import namedtuple
+a = [1, 2, 3, 4, 5]
 
+a[0:2] = ('a', 'b', 'c')
 
-Color = namedtuple('Color', 'red green blue alpha')
-
-def random_color():
-    red = randint(0, 255)
-    green = randint(0, 255)
-    blue = randint(0, 255)
-    alpha = round(random, 2)
-
-    return Color(red, green, blue, alpha)
-
+print(a)
