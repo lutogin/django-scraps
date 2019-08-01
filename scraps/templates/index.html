@@ -2,5 +2,18 @@
 {% block title %}SCRAPS v0.1 alpha{% endblock %}
 
 {% block content %}
+    <div class="uk-grid">
+      <div class="uk-width-auto">
+      <ul class="uk-nav">
+        {% for tclgy in technologies %}
+          <li><a href="/info?t={{ tclgy.link_name }}">{{ tclgy.name }}</a></li>
+        {% endfor %}
+      </ul>
+      </div>
+      <div class="uk-width-expand">
+        {% block data %}
+        {% endblock %}
+      </div>
+    </div>
 {% endblock %}
 

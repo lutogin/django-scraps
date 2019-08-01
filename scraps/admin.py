@@ -3,4 +3,9 @@ from scraps.models import Technology, Content
 
 
 admin.site.register(Technology)
-admin.site.register(Content)
+
+
+@admin.register(Content)
+class ContentAdmin(admin.ModelAdmin):
+    list_display = ('title', 'technology', 'id')
+    list_filter = ('technology',)

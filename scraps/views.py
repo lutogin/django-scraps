@@ -3,11 +3,14 @@ from scraps import models
 
 
 def index(req):
-    return render(req, 'index.html')
+    technologies = models.Technology.objects.all().values()
+
+    return render(req, 'index.html', context={'technologies': technologies})
 
 
 def get_info(req):
-    t = req.GET['t'] or 'php'
-    content = models.Content.objects.filter(technology__link_name=t).values()
+    technologies = models.Technology.objects.all().values()
+    select_tech = req.GET['t'] or 'python'
+    content = models.Content.objects.filter(technology__link_name=select_tech).values()
 
-    return render(req, 'info_page.html', context={'content': content})
+    return render(req, 'info_page.html', context={'content': content, 'technologies': technologies})

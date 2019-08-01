@@ -14,23 +14,8 @@
 </head>
 <body>
   <div class="uk-container">
-    <div class="uk-grid">
-      <div class="uk-width-auto">
-      <ul class="uk-nav">
-        <li><a href="/info?t=html_css">HTML/CSS</a></li>
-        <li><a href="/info?t=php">PHP</a></li>
-        <li><a href="/info?t=mysql">MySQL</a></li>
-        <li><a href="/info?t=js">JS</a></li>
-        <li><a href="/info?t=vue">Vue</a></li>
-        <li><a href="/info?t=node">Node</a></li>
-        <li><a href="/info?t=py">Python</a></li>
-      </ul>
-      </div>
-      <div class="uk-width-expand">
-        {% block content %}
-        {% endblock %}
-      </div>
-    </div>
+    {% block content %}
+    {% endblock %}
   </div>
 
 </body>
