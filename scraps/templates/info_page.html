@@ -7,7 +7,9 @@
       <li>
         <a class="uk-accordion-title" href="#">{{ el.title }}</a>
         <div class="uk-accordion-content">
-          {{ el.content|safe }}
+          <div class="uk-card uk-card-default uk-card-body">
+            {{ el.content|safe }}
+          </div>
         </div>
       </li>
     {% endfor %}
