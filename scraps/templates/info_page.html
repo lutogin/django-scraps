@@ -2,16 +2,37 @@
 {% block title %}{% endblock %}
 
 {% block data %}
-  <ul uk-accordion>
+  <div class="ui grid">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular attached menu">
+      {% for el in content %}
+        <a class="item" data-tab="data-tab-{{ el.id }}">
+          {{ el.title }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="twelve wide stretched column">
     {% for el in content %}
-      <li>
-        <a class="uk-accordion-title" href="#">{{ el.title }}</a>
-        <div class="uk-accordion-content">
-          <div class="uk-card uk-card-default uk-card-body">
-            {{ el.content|safe }}
-          </div>
-        </div>
-      </li>
+      <div class="ui attached tab segment" data-tab="data-tab-{{ el.id }}">
+        {{ el.content|safe }}
+      </div>
     {% endfor %}
-  </ul>
+  </div>
+</div>
+
+{#  <div class="ui styled fluid accordion">#}
+{#    {% for el in content %}#}
+{#      <div class="title">#}
+{#        <i class="dropdown icon"></i>#}
+{#        {{ el.title }}#}
+{#      </div>#}
+{#      <div class="content">#}
+{#        <div class="transition hidden">#}
+{#          {{ el.content|safe }}#}
+{#        </div>#}
+{#      </div>#}
+{#    {% endfor %}#}
+{#  </div>#}
+
 {% endblock %}
