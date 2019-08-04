@@ -14,7 +14,7 @@
   </div>
   <div class="twelve wide stretched column">
     {% for el in content %}
-      <div class="ui attached tab segment" data-tab="data-tab-{{ el.id }}">
+      <div class="ui attached tab" data-tab="data-tab-{{ el.id }}">
         {{ el.content|safe }}
       </div>
     {% endfor %}
