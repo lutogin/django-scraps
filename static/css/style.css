@@ -1,7 +1,3 @@
-html {
-    /*background-image: url("/static/img/bg.jpg");*/
-    /*font-family: GillSans, Calibri, Trebuchet, sans-serif;*/
-}
 
 b {
     color: #3498db;
@@ -18,3 +14,34 @@ b {
 .link a{
     margin-right: 25px;
 }
+
+/**
+* Black theme
+*/
+b {
+    background-color: darkslategrey;
+}
+html, body {
+    /*background-image: url("/static/img/bg.jpg");*/
+    /*font-family: GillSans, Calibri, Trebuchet, sans-serif;*/
+    background-color: #1E1E1E !important;
+}
+
+:not(.enlighter) p,
+:not(.enlighter) a,
+:not(.enlighter) h1,
+:not(.enlighter) h2,
+:not(.enlighter) h3,
+:not(.enlighter) h4,
+:not(.enlighter) h5,
+:not(.enlighter) h6,
+:not(.enlighter) li {
+    color: #cfd5e0 !important;
+}
+
+a.item.active {
+    background-color: #1E1E1E !important;
+}
+/**
+* Black theme end
+*/
