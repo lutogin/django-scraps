@@ -15,5 +15,4 @@ def get_info(req):
     get_object_or_404(models.Technology, link_name=select_tech)
     content = models.Content.objects.filter(technology__link_name=select_tech)
 
-
     return render(req, 'info_page.html', context={'content': content, 'technologies': technologies})
