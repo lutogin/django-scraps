@@ -27,9 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'evening-taiga-33144.herokuapp.com',
-    'lutogin.pythonanywhere.com'
-    '127.0.0.1',
-    'localhost'
+    'lutogin.pythonanywhere.com',
+    '127.0.0.1'
 ]
 
 
